@@ -1,4 +1,4 @@
-package com.bignerdranch.android.photogallery.utils;
+package com.bignerdranch.android.photogallery.utils.download;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
