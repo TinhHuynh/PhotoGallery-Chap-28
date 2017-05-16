@@ -12,11 +12,10 @@ import android.net.ConnectivityManager;
 import android.os.SystemClock;
 import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationManagerCompat;
 import android.util.Log;
 
 import com.bignerdranch.android.photogallery.R;
-import com.bignerdranch.android.photogallery.controller.PhotoGalleryActivity;
+import com.bignerdranch.android.photogallery.controller.activity.PhotoGalleryActivity;
 import com.bignerdranch.android.photogallery.model.GalleryItem;
 import com.bignerdranch.android.photogallery.utils.download.FlickrFetchr;
 import com.bignerdranch.android.photogallery.utils.persistent.QueryPerferences;

@@ -1,8 +1,10 @@
-package com.bignerdranch.android.photogallery.controller;
+package com.bignerdranch.android.photogallery.controller.activity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
+
+import com.bignerdranch.android.photogallery.controller.fragment.PhotoGalleryFragment;
 
 public class PhotoGalleryActivity extends SingleFragmentActivity {
 

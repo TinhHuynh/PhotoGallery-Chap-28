@@ -1,4 +1,4 @@
-package com.bignerdranch.android.photogallery.controller;
+package com.bignerdranch.android.photogallery.controller.fragment;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;

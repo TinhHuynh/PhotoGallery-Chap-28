@@ -1,4 +1,4 @@
-package com.bignerdranch.android.photogallery.controller;
+package com.bignerdranch.android.photogallery.controller.activity;
 
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
