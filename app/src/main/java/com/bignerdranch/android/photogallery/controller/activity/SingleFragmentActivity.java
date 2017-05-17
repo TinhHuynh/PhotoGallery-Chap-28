@@ -6,6 +6,8 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.bignerdranch.android.photogallery.R;
 
@@ -35,7 +37,6 @@ public abstract class SingleFragmentActivity extends AppCompatActivity {
             fragmentManager.beginTransaction()
                     .add(R.id.fragment_container, fragment)
                     .commit();
-
         }
     }
 

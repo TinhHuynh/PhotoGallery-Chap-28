@@ -4,7 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.util.Log;
+import android.webkit.WebView;
+import android.widget.Toast;
 
+import com.bignerdranch.android.photogallery.R;
 import com.bignerdranch.android.photogallery.controller.fragment.PhotoPageFragment;
 
 /**
@@ -13,7 +18,7 @@ import com.bignerdranch.android.photogallery.controller.fragment.PhotoPageFragme
 
 public class PhotoPageActivity extends SingleFragmentActivity {
 
-    public static Intent newIntent(Context context, Uri photoPageUri){
+    public static Intent newIntent(Context context, Uri photoPageUri) {
         Intent i = new Intent(context, PhotoPageActivity.class);
         i.setData(photoPageUri);
         return i;
@@ -22,5 +27,20 @@ public class PhotoPageActivity extends SingleFragmentActivity {
     @Override
     protected Fragment createFragment() {
         return PhotoPageFragment.newInstance(getIntent().getData());
+    }
+
+    @Override
+    public void onBackPressed() {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        PhotoPageFragment photoPageFragment =
+                (PhotoPageFragment) fragmentManager.findFragmentById(R.id.fragment_container);
+        if (photoPageFragment != null) {
+            WebView webView = photoPageFragment.getWebView();
+            if (webView.canGoBack()) {
+                webView.goBack();
+            } else {
+                super.onBackPressed();
+            }
+        }
     }
 }

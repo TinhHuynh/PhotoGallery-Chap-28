@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -107,7 +108,7 @@ public class PhotoGalleryFragment extends VisibleFragment {
             mItemImageView.setImageDrawable(drawable);
         }
 
-        public void bindGalleryItem(GalleryItem galleryItem){
+        public void bindGalleryItem(GalleryItem galleryItem) {
             mGalleryItem = galleryItem;
         }
 
@@ -196,9 +197,9 @@ public class PhotoGalleryFragment extends VisibleFragment {
         });
 
         MenuItem toggleItem = menu.findItem(R.id.menu_item_toggle_polling);
-        if(PollService.isServiceAlarmOn(getActivity())){
+        if (PollService.isServiceAlarmOn(getActivity())) {
             toggleItem.setTitle(R.string.stop_polling);
-        }else{
+        } else {
             toggleItem.setTitle(R.string.start_polling);
         }
     }
